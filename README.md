@@ -19,15 +19,18 @@ A Web-based responsive Music Player with essential features and playlist support
 - Playlists are saved in `localStorage` so they stay after reload
 
 ## Tech Stack
--Frontend: HTML,CSS, JavaScript
--Audio Handling: HTML5 <audio> tag + JavaScript for Controls
+    Frontend: HTML,CSS, JavaScript
+    
+    Audio Handling: HTML5 <audio> + JavaScript for Controls
 
 ## Key Concepts
-DOM Manipulation
-Media APIs in JavaScript
+• DOM Manipulation
+
+• Media APIs in JavaScript
 
 ## Future Work
--Backend:Node.js or Firebase for storing playlists/music
--Frameworks: React.js for UI management
+   Backend:Node.js or Firebase for storing playlists/music
+   
+   Frameworks: React.js for UI management
 
 
