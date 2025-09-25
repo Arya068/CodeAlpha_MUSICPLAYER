@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <nav id="mobileMenu">
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <ul class="menu-items" id="menuItems">
+      <li><a href="#upload-section">Upload</a></li>
+      <li><a href="#playlist">Playlist</a></li>
+      <li><a href="#player-controls">Player</a></li>
+      <li><a href="#search-section">Search</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+ 
+    <header>
+      <h1>🎶Music Player</h1>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+   
+    <section id="upload-section">
+      <input type="file" id="fileInput" multiple accept="audio/*">
+      <button onclick="uploadFiles()">Upload</button>
+    </section>
+
+    <!-- 🔍 Search Section -->
+    <section id="search-section">
+      <input type="text" id="searchInput" placeholder="Search by title, artist, genre">
+    </section>
+
+   
+    <section id="filter-section">
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+      </select>
+      <select id="artistFilter">
+        <option value="">All Artists</option>
+      </select>
+    </section>
+
+  
+    <section id="playlist">
+      <ul id="playlistItems"></ul>
+    </section>
+
+     <!-- Controls -->
+    <section id="player-controls">
+      <audio id="audioPlayer" controls></audio>
+      <div class="controls">
+        <button onclick="playTrack()">▶️ Play</button>
+        <button onclick="pauseTrack()">⏸️ Pause</button>
+        <button onclick="nextTrack()">⏭️ Next</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01">
+      </div>
+    </section>
+  </div>
+
+  <!-- Mini Player -->
+  <div id="miniPlayer">
+    <span id="miniTitle">No track playing</span>
+    <button onclick="playTrack()">▶️</button>
+    <button onclick="pauseTrack()">⏸️</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

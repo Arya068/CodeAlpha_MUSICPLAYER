@@ -1,0 +1,190 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Switching  */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+
+section {
+  margin-bottom: 20px;
+  display: block;
+}
+
+#upload-section,
+#search-section,
+#filter-section,
+#player-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="file"],
+input[type="text"],
+select,
+button,
+audio {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+
+#playlistItems {
+  list-style: none;
+  padding: 0;
+}
+
+#playlistItems li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#playlistItems li:hover {
+  background-color: #f0f0f0;
+}
+
+      /* Mini player */
+#miniPlayer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+       /* Mobile menu */
+#mobileMenu {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.menu-items li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+        /* Responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  #upload-section,
+  #search-section,
+  #filter-section,
+  #player-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input,
+  select,
+  button,
+  audio {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    margin-top: 10px;
+  }
+
+  .menu-items.show {
+    display: flex;
+  }
+}
