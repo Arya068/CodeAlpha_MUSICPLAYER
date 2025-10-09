@@ -91,16 +91,8 @@ document.body.addEventListener('touchend', e => {
     playTrack(currentTrackIndex);
   }
 });
-
 window.onload = loadPlaylist;
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCw1Qvz4xaaYEMndORcb9Ns8uUlTRXlhbo",
-//   authDomain: "music-player-9c2dc.firebaseapp.com",
-//   projectId: "music-player-9c2dc",
-//   storageBucket: "music-player-9c2dc.firebasestorage.app",
-//   messagingSenderId: "429078304787",
-//   appId: "1:429078304787:web:45e92d247486e7dd8a07e6",
-//   measurementId: "G-J7SH6LZNYS"
 
-// };
+
+
